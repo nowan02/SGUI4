@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="SGUI4.View.TaskFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SGUI4.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="310" d:DesignWidth="300">
+    <Grid Background="Cornsilk">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="NAME" FontSize="16" FontWeight="Bold"/>
+            <TextBox Text="{Binding Name}" Height="24" Margin="5 0 15 0"/>
+            <Label Content="DUE" FontSize="16" FontWeight="Bold"/>
+            <DatePicker SelectedDate="{Binding Deadline}" Margin="5 0 15 0"/>
+            <Label Content="DESCRIPTION" FontSize="16" FontWeight="Bold"/>
+            <TextBox Text="{Binding Description}" Height="100" Margin="5 0 15 0"/>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Important}" VerticalAlignment="Center" Margin="5 0 15 0"/>
+                <Label Content="IMPORTANT" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <Button Content="Add" HorizontalAlignment="Center" FontSize="16" Width="280" Margin="5 0 15 0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
