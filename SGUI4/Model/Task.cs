@@ -9,15 +9,15 @@ namespace SGUI4.Model
     public class Task
     {
         public string Name { get; set; }
-        public int Deadline { get; set; } //num of days left
-        public string Type { get; set; } //Important / Not Important
-        public string Description { get; set; } //extra thing
+        public DateTime Deadline { get; set; } 
+        public bool IsImportant { get; set; }
+        public string Description { get; set; }
 
-        public Task(string name, int deadline, string type, string descrition)
+        public Task(string name, DateTime deadline, bool isImportant, string descrition)
         {
             Name = name;
             Deadline = deadline;
-            Type = type;
+            IsImportant = isImportant;
             Description = descrition;
         }
 
